@@ -1,0 +1,110 @@
+
+
+
+/* Title Styling */
+.complaints-title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: bold;
+    padding-top: 0%;
+    
+     
+    
+    
+}
+
+/* Table Styling */
+.complaints-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+
+.complaints-table th, .complaints-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.complaints-table th {
+    background-color: #6a0dad;
+    color: white;
+    font-size: 16px;
+}
+
+/* Status Dropdown Styling */
+.status-dropdown {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #6a0dad;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    background-color: white;
+}
+
+
+.status-dropdown option {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+.status-dropdown:focus {
+    outline: none;
+}
+
+
+.status-dropdown.status-completed {
+    background-color: lightgreen;
+}
+
+.status-dropdown.status-pending {
+    background-color: lightcoral;
+}
+
+.status-dropdown.status-in-progress {
+    background-color: rgb(245, 245, 125);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a0dad;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; 
+    width: auto; 
+    max-width: 300px; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.profile-icon {
+    cursor: pointer;
+}

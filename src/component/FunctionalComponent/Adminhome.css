@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Admin Home Container */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f8f9fa;
+    overflow-y: auto;
+    padding-top: 100px; /* To accommodate fixed navbar */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #6a0dad;
+    color: white;
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Prevent it from being too large */
+}
+
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.profile-icon {
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.profile-details {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    line-height: 2.0;
+    z-index: 1050;
+}
+
+/* Maintenance Service Boxes */
+.service-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.service-box {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #6a0dad;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+/* Footer (Optional, if you plan to add it) */
+.footer {
+    background-color: #6a0dad;
+    color: white;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Individual Service Box Backgrounds */
+.carpentry {
+    background-image: url('/carpentry.webp');
+}
+.electrical {
+    background-image: url('/electrical-wiring.jpg');
+}
+.plumbing {
+    background-image: url('/plumbing.avif');
+}
+.drinking-water {
+    background-image: url('/water.webp');
+}
+.housekeeping {
+    background-image: url('/house.jpeg');
+}
+.network {
+    background-image: url('/networking.jpg');
+}
+.infrastructure {
+    background-image: url('/infra.jpeg');
+}
+.food-dining {
+    background-image: url('/food.jpg');
+}
+.waste-management {
+    background-image: url('/waste.jpg');
+}
+.laundry {
+    background-image: url('/laundry.jpeg');
+}
+/* Service Box Image Backgrounds */
+/* General Styling for Service Boxes */
+.service-box {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents overlay from overflowing */
+}
+
+/* Add background images */
+.carpentry, .electrical, .plumbing, .drinking-water, 
+.housekeeping, .network, .infrastructure, .food-dining, 
+.waste-management, .laundry {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Overlay for better text visibility */
+.carpentry::before, .electrical::before, .plumbing::before, 
+.drinking-water::before, .housekeeping::before, .network::before, 
+.infrastructure::before, .food-dining::before, .waste-management::before, 
+.laundry::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark transparent layer */
+    z-index: 0; /* Places the overlay below the text */
+    border-radius: 10px;
+}
+
+/* Ensure text is above the overlay */
+.service-box span {
+    position: relative;
+    z-index: 1;
+}
