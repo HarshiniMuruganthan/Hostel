@@ -15,7 +15,7 @@
 
 /* Navbar */
 .navbar {
-    background-color: #6a0dad;
+    background-color: #1755A7;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -87,11 +87,14 @@
     font-size: 18px;
     line-height: 1.6;
 }
+.about-text h2 {
+    color: #09326C; /* Dark blue color for headings */
+}
 
 /* Footer */
 .footer {
-    background-color: #6a0dad;
-    color: white;
+    background-color:#F8C401;
+    color: #09326C;
     text-align: left;
     padding: 15px 50px;
     font-size: 16px;

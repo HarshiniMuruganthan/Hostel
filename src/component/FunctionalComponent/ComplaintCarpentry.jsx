@@ -45,7 +45,7 @@ const ComplaintCarpentry = () => {
   };
 
   return (
-    <div className="carpentry-container">
+    <div className="carpenter-container">
       {/* Navbar */}
       <nav className="navbar">
         <div className="logo">

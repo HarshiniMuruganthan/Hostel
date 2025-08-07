@@ -27,7 +27,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: #6a0dad;
+    background: #1755A7;
     color: white;
     z-index: 1000;
 }
@@ -104,7 +104,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background: #6a0dad;
+    background: #1755A7;
     font-size: 18px;
     font-weight: bold;
     color: white;
@@ -123,8 +123,8 @@
 
 /* Footer (Optional, if you plan to add it) */
 .footer {
-    background-color: #6a0dad;
-    color: white;
+    background-color: #F8C401;
+    color:#09326C;
     text-align: left;
     padding: 15px 30px;
     font-size: 16px;

@@ -22,7 +22,6 @@ export default function Userabout() {
             <div className="nav-links">
               <Link to="/home">Home</Link>
               <Link to="/userabout">About</Link>
-
               <Link to="/userhistory">History</Link>
 
             </div>

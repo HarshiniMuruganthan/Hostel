@@ -74,7 +74,7 @@
 .landing-button {
   margin: 10px 0;
   padding: 14px 32px;
-  background: linear-gradient(to right, #905dbc, #703ed3);
+  background: linear-gradient(to right, #1755A7, #09326C);
   color: white;
   border: none;
   border-radius: 30px;
@@ -83,14 +83,14 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  box-shadow: 0 0 10px #9651d3aa;
+  box-shadow: 0 0 10px #03224b;
 }
 
 .landing-button:hover {
-  background: #fff;
-  color: #8546b3;
+  background: #F8C401;
+  color: #1755A7;
   transform: scale(1.05);
-  box-shadow: 0 0 20px #ffffffcc;
+  box-shadow: 0 0 20px #03224b;
 }
 
 /* Animations */

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css"; // Import the updated CSS
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -36,39 +37,37 @@ export default function Login() {
   };
 
   return (
-    <div className="login-page">
-      <div className="left-side">
-        <img src="/ourlogo.png" alt="Animated" />
-      </div>
-      <div className="right-side">
-        <div className="login-box">
-          <h2>HostelCare</h2>
-          <div className="input-container">
-            <input
-              type="text"
-              placeholder="Enter Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div className="input-container">
-            <input
-              type="text"
-              placeholder="Enter Room Number"
-              value={roomNo}
-              onChange={(e) => setRoomNo(e.target.value)}
-            />
-          </div>
-          <div className="input-container">
-            <input
-              type="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <button onClick={handleLogin}>Login</button>
+    <div className="login-container">
+      <div className="login-box">
+        <h2>User Login</h2>
+        <div className="input-group">
+          <label><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
         </div>
+        <div className="input-group">
+          <label><b>Room Number</b></label>
+          <input
+            type="text"
+            placeholder="Enter Room Number"
+            value={roomNo}
+            onChange={(e) => setRoomNo(e.target.value)}
+          />
+        </div>
+        <div className="input-group">
+          <label><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button className="login-button" onClick={handleLogin}>Login</button>
       </div>
     </div>
   );

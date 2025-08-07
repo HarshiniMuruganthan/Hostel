@@ -8,39 +8,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right, #b783e8, #d8b4fe); /* Gradient background */
+    background: linear-gradient(to right,#1755A7, #09326C); /* Gradient background */
     overflow: hidden; /* Ensures no scrolling */
-}
-
-/* Animated Background (Left Side) */
-.left-side {
-    width: 0%;
-    height: 100vh;
-    background: linear-gradient(to right, #b783e8, #d8b4fe);
-    animation: expand-purple 2s forwards ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.left-side img {
-    max-width: 70%;
-    height: auto;
-}
-
-@keyframes expand-purple {
-    0% { width: 0%; }
-    100% { width: 50%; }
-}
-
-/* Right Side - Login Form */
-.right-side {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
+    color: white;
 }
 
 /* Transparent Login Box */
@@ -61,7 +31,7 @@
 /* Heading */
 .admin-login-box h2 {
     font-size: 28px; /* Slightly larger text */
-    color: #333;
+    color: white;
     text-align: center; /* Centers the text */
     width: 100%;
     margin: 0 auto;
@@ -76,7 +46,7 @@
 
 .input-group label {
     font-size: 16px;
-    color: #333;
+    color: white;
     margin-bottom: 5px;
 }
 
@@ -88,7 +58,7 @@
     outline: none;
     font-size: 16px;
     background: rgba(255, 255, 255, 0.8);
-    color: #333;
+    color:black;
     margin-bottom: 2px;
 }
 
@@ -96,20 +66,22 @@
 .admin-login-button {
     width: 80%; /* Reduced width for centering effect */
     padding: 12px; /* Bigger button */
-    background: #6a0dad; /* Purple background */
-    color: white;
+    margin-top: 20px;
+    background: #F8C401; /* Purple background */
+    color: #09326C;
+    font-weight: bold;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px; /* Larger text on button */
     display: block;
     text-align: center;
-    margin: 0 auto; /* Centers the button */
     transition: 0.3s ease;
+    margin-left: 25px;
 }
 
 .admin-login-button:hover {
-    background: #5a0cb5; /* Darker purple on hover */
+    background: white; /* Darker purple on hover */
 }
 
 /* Responsive Design */

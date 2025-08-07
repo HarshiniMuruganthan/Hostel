@@ -1,5 +1,19 @@
+.carpenter-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/carpentrybg.avif') no-repeat center center/cover;
+    padding: 20px;
+    position: relative;
+    opacity: 0.9; 
+  }
 
-
+.complaints-container{
+    margin-top: 400px;
+}
 
 /* Title Styling */
 .complaints-title {
@@ -9,11 +23,7 @@
     margin-bottom: 20px;
     color: white;
     font-weight: bold;
-    padding-top: 0%;
-    
-     
-    
-    
+    padding-top: 0%;   
 }
 
 /* Table Styling */
@@ -31,7 +41,7 @@
 }
 
 .complaints-table th {
-    background-color: #6a0dad;
+    background-color:#1755A7;
     color: white;
     font-size: 16px;
 }
@@ -40,7 +50,7 @@
 .status-dropdown {
     padding: 8px;
     border-radius: 5px;
-    border: 1px solid #6a0dad;
+    border: 1px solid #F8C401;
     cursor: pointer;
     font-size: 14px;
     width: 100%;
@@ -76,7 +86,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6a0dad;
+    background-color: #1755A7;
     padding: 10px 20px;
     color: white;
 }

@@ -1,0 +1,97 @@
+/* Full-screen layout */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, #1755A7, #09326C);
+  overflow: hidden;
+  color: white;
+}
+
+/* Glassmorphic Login Box */
+.login-box {
+  width: 350px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Heading */
+.login-box h2 {
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Input Field Styling */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  margin-bottom: 2px;
+}
+
+/* Login Button Styling */
+.login-button {
+  width: 80%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #F8C401;
+  color: #09326C;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  background: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+}

@@ -7,7 +7,7 @@
 
 /* Navbar */
 .navbar {
-    background-color: #6a0dad;
+    background-color: #1755A7;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -68,7 +68,7 @@
 .about-header h2 {
     font-size: 38px;
     margin-bottom: 20px;
-    color: #6a0dad;
+    color: #09326C;
 }
 
 .about-header p {
@@ -110,7 +110,7 @@
 }
 
 .about-card h3 {
-    color: #6a0dad;
+    color: #09326C;
     margin-bottom: 12px;
     font-size: 22px;
 }
@@ -123,8 +123,8 @@
 
 /* Footer */
 .footer {
-    background-color: #6a0dad;
-    color: white;
+    background-color:#F8C401;
+    color: #09326C;
     padding: 12px 50px;
     font-size: 15px;
     display: flex;
@@ -145,7 +145,7 @@
 }
 
 .footer a {
-    color: #fff;
+    color:#09326C;
     text-decoration: none;
     transition: color 0.3s ease;
 }

@@ -4,35 +4,50 @@
     background: url("/background.jpg") no-repeat center center fixed;
     background-size: cover;
     padding: 60px 20px 50px; /* Top padding added */
-    font-family: Arial, sans-serif;
   }
   
   /* Navbar Styling */
-  .navbar {
+.navbar {
+    background-color: #1755A7;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6a0dad;
-    padding: 10px 20px;
-    color: white;
-  }
-  
-  .logo img {
-    height: 60px;
-    width: auto;
-  }
-  
-  .nav-right {
+    padding: 15px 50px;
+}
+
+.logo {
+    margin-left: 20px;
     display: flex;
     align-items: center;
-  }
-  
-  .nav-links a {
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    max-width: 300px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-size: 18px;
     font-weight: bold;
-  }
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
   
   .profile-icon {
     cursor: pointer;
@@ -66,7 +81,7 @@
   
   .history-wrapper h2 {
     text-align: center;
-    color: #4a0072;
+    color: #09326C;
     margin-bottom: 25px;
     font-size: 28px;
     font-weight: 600;
@@ -86,7 +101,7 @@
   }
   
   .history-table th {
-    background-color: #6a0dad;
+    background-color: #09326C;
     color: white;
   }
   

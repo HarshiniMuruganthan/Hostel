@@ -22,7 +22,7 @@ export default function About() {
             <div className="nav-links">
               <Link to="/ahome">Home</Link>
               <Link to="/about">About</Link>
-              <Link to="/history">History</Link>
+              <Link to="/history">Report</Link>
             </div>
             <div className="profile-icon" onClick={handleProfileClick}>
               <FaUserCircle size={40} />
