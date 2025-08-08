@@ -13,49 +13,6 @@
     overflow: hidden; /* Prevents scrolling */
 }
 
-/* Navbar */
-.navbar {
-    background-color: #1755A7;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
-
-.logo {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px; /* Adjust the height as needed */
-    width: auto; /* Maintain aspect ratio */
-    max-width: 300px; /* Prevent it from being too large */
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
 /* About Section */
 .about-section {
     display: flex;
@@ -98,6 +55,7 @@
     text-align: left;
     padding: 15px 50px;
     font-size: 16px;
+    font-weight:900px;
     display: flex;
     flex-direction: column;
     justify-content: center;

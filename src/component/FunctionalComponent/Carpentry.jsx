@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
-import "./Carpentry.css"
+import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import "./Carpentry.css";
 
 export default function ComplaintForm() {
   const [complaint, setComplaint] = useState("");
   const [file, setFile] = useState(null);
   const [submitted, setSubmitted] = useState(false);
   const [user, setUser] = useState(null);
-  const [category, setCategory] = useState(""); // Start with no category selected
+  const [category, setCategory] = useState("");
+  const [showProfileDetails, setShowProfileDetails] = useState(false);
+  const [userInfo, setUserInfo] = useState(null);
 
   const categories = [
     "Carpentry",
@@ -15,16 +19,22 @@ export default function ComplaintForm() {
     "Laundry",
     "Maintenance",
     "Network",
+    "Others",
   ];
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     if (storedUser) {
       setUser(storedUser);
+      setUserInfo(storedUser);
     } else {
       alert("You must be logged in to submit a complaint.");
     }
   }, []);
+
+  const handleProfileClick = () => {
+    setShowProfileDetails(!showProfileDetails);
+  };
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
@@ -74,11 +84,38 @@ export default function ComplaintForm() {
 
   return (
     <div className="carpentry-container">
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="logo">
+          <img src="/ourlogo.png" alt="logo" />
+        </div>
+
+        <div className="nav-right">
+          <div className="nav-links">
+            <Link to="/home">Home</Link>
+            <Link to="/userabout">About</Link>
+            <Link to="/userhistory">History</Link>
+          </div>
+          <div className="profile-icon" onClick={handleProfileClick}>
+            <FaUserCircle size={40} />
+          </div>
+        </div>
+      </nav>
+
+      {showProfileDetails && userInfo && (
+        <div className="profile-details">
+          <h3>Login Details</h3>
+          <p>Name: {userInfo.name}</p>
+          <p>Room No: {userInfo.roomNo}</p>
+        </div>
+      )}
+
+      {/* Complaint Form */}
       {!submitted ? (
         <div className="carpentry-form">
           <h2 className="carpentry-title">Complaint Form</h2>
           <form onSubmit={handleSubmit}>
-            
             <select
               id="category"
               className="carpentry-dropdown"

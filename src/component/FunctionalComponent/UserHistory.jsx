@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import UserNavbar from "./Usernavbar";
 import "./UserHistory.css";
 
 const UserHistory = () => {
   const [userComplaints, setUserComplaints] = useState([]);
-  const [showProfileDetails, setShowProfileDetails] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,8 +25,8 @@ const UserHistory = () => {
         }
 
         const data = await res.json();
-        setUserComplaints(data);  
-        console.log(data)
+        setUserComplaints(data);
+        console.log(data);
       } catch (error) {
         setError("Error fetching complaints: " + error.message);
         console.error("Error fetching complaints:", error);
@@ -40,43 +38,16 @@ const UserHistory = () => {
     fetchComplaints();
   }, []);
 
-  const handleProfileClick = () => {
-    setShowProfileDetails(!showProfileDetails);
-  };
-
   if (loading) return <div>Loading...</div>;
 
   return (
     <div className="user-history-container">
-      <nav className="navbar">
-        <div className="logo">
-          <img src="/ourlogo.png" alt="logo" />
-        </div>
-
-        <div className="nav-right">
-          <div className="nav-links">
-            <Link to="/home">Home</Link>
-            <Link to="/userabout">About</Link>
-            <Link to="/userhistory">History</Link>
-          </div>
-          <div className="profile-icon" onClick={handleProfileClick}>
-            <FaUserCircle size={40} />
-          </div>
-        </div>
-      </nav>
-
-      {showProfileDetails && userInfo && (
-        <div className="profile-details">
-          <h3>Login Details</h3>
-          <p>Name: {userInfo.name}</p>
-          <p>Room No: {userInfo.roomNo}</p>
-        </div>
-      )}
+      <UserNavbar userInfo={userInfo} />
 
       <div className="history-wrapper">
         <h2>Your Complaint Report</h2>
         {error ? (
-          <p>{error}</p> 
+          <p>{error}</p>
         ) : userComplaints.length === 0 ? (
           <p>No complaints found.</p>
         ) : (
@@ -88,18 +59,16 @@ const UserHistory = () => {
                 <th>Problem</th>
                 <th>Room No</th>
                 <th>Status</th>
-              
               </tr>
             </thead>
             <tbody>
               {userComplaints.map((c, idx) => (
                 <tr key={idx}>
-                  <td>{userInfo.name || "N/A"}</td>
+                  <td>{userInfo?.name || "N/A"}</td>
                   <td>{c.category}</td>
                   <td>{c.complaintText}</td>
                   <td>{c.roomNumber}</td>
                   <td>{c.status}</td>
-                  
                 </tr>
               ))}
             </tbody>

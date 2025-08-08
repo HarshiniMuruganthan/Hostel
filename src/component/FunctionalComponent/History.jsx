@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
 import axios from "axios";
+import Navbar from "./Adminnavbar"; // ✅ Import reusable navbar
 import "./History.css";
 
 const History = () => {
   const [historyData, setHistoryData] = useState([]);
-  const [showProfileDetails, setShowProfileDetails] = useState(false);
-
-  const handleProfileClick = () => {
-    setShowProfileDetails(!showProfileDetails);
-  };
 
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const response = await axios.get("https://hostelcare-qqdm.onrender.com/api/complaints/admin/all");
+        const response = await axios.get(
+          "https://hostelcare-qqdm.onrender.com/api/complaints/admin/all"
+        );
         const grouped = response.data;
 
-      
-        const transformed = Object.entries(grouped).map(([category, records]) => ({
-          category,
-          records,
-        }));
+        const transformed = Object.entries(grouped).map(
+          ([category, records]) => ({
+            category,
+            records,
+          })
+        );
         setHistoryData(transformed);
       } catch (err) {
         console.error("Error fetching admin history:", err);
@@ -34,31 +31,7 @@ const History = () => {
 
   return (
     <div className="home-container">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo">
-          <img src="/ourlogo.png" alt="HostelCare Logo" className="logo-image" />
-        </div>
-        <div className="nav-right">
-          <div className="nav-links">
-            <Link to="/ahome">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/history">Report</Link>
-          </div>
-          <div className="profile-icon" onClick={handleProfileClick}>
-            <FaUserCircle size={40} />
-          </div>
-        </div>
-      </nav>
-
-      {showProfileDetails && (
-        <div className="profile-details">
-          <h3>Login Details</h3>
-          <p>Email: w@gmail.com</p>
-          <p>Name: Chithra</p>
-          <p>Block: A</p>
-        </div>
-      )}
+      <Navbar /> {/* ✅ Reusable Navbar */}
 
       <div className="history-container">
         <h2 className="history-title">Overall Complaints Report</h2>
@@ -80,7 +53,11 @@ const History = () => {
                     <td>{record.studentName}</td>
                     <td>{record.roomNumber}</td>
                     <td>{record.complaintText}</td>
-                    <td className={`history-status-${record.status.toLowerCase().replace(" ", "-")}`}>
+                    <td
+                      className={`history-status-${record.status
+                        .toLowerCase()
+                        .replace(" ", "-")}`}
+                    >
                       {record.status}
                     </td>
                   </tr>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
+import Navbar from "./Adminnavbar"
 import "./ComplaintCarpentry.css";
 
 const ComplaintCarpentry = () => {
@@ -46,23 +47,7 @@ const ComplaintCarpentry = () => {
 
   return (
     <div className="carpenter-container">
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="logo">
-          <img src="/ourlogo.png" alt="HostelCare Logo" className="logo-image" />
-        </div>
-        <div className="nav-right">
-          <div className="nav-links">
-            <Link to="/ahome">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/history">History</Link>
-          </div>
-          <div className="profile-icon">
-            <FaUserCircle size={40} />
-          </div>
-        </div>
-      </nav>
-
+     <Navbar/>
       {/* Complaint Table */}
       <div className="complaints-container">
         <h2 className="complaints-title">Carpentry Complaints</h2>

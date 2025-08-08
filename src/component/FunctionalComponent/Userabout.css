@@ -5,49 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #1755A7;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
-
-.logo {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-    max-width: 300px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
-
 /* About Section */
 .about-section {
     background: linear-gradient(135deg, #ffffff 0%, #f4f1fa 100%);
@@ -131,7 +88,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-weight: 500;
+    font-weight: 900;
     width: 100%;
     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
     gap: 6px;

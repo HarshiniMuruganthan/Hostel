@@ -1,48 +1,29 @@
-import React from "react";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaUserCircle } from "react-icons/fa";
+import React, { useState } from "react";
 import "./Userabout.css";
+import Usernavbar from "./Usernavbar";
 
 export default function Userabout() {
-    const [showProfileDetails, setShowProfileDetails] = useState(false);
-  
-    const handleProfileClick = () => {
-      setShowProfileDetails(!showProfileDetails);
-    };
-  
-    return (
-      <div className="home-container">
-     
-        <nav className="navbar">
-        <div className="logo">
-    <img src="/ourlogo.png" alt="HostelCare Logo" className="logo-image" />
-  </div>
-          <div className="nav-right">
-            <div className="nav-links">
-              <Link to="/home">Home</Link>
-              <Link to="/userabout">About</Link>
-              <Link to="/userhistory">History</Link>
+  const [showProfileDetails, setShowProfileDetails] = useState(false);
 
-            </div>
-            <div className="profile-icon" onClick={handleProfileClick}>
-              <FaUserCircle size={40} />
-            </div>
-          </div>
-        </nav>
-  
-       
+  const handleProfileClick = () => {
+    setShowProfileDetails(!showProfileDetails);
+  };
+
+  return (
+    <div className="home-container">
+      {/* Navbar */}
+      <Usernavbar onProfileClick={handleProfileClick} />
+
+      {/* Profile Details */}
       {showProfileDetails && (
         <div className="profile-details">
           <h3>Login Details</h3>
           <p>Room No: 101</p>
           <p>Name: Harshini</p>
         </div>
-        )}
-  
-  
+      )}
 
- 
+      {/* About Section */}
       <div id="about-section" className="about-section">
         <div className="about-content">
           <img src="/hostelabout.jpg" alt="About Us" className="about-image" />
@@ -60,10 +41,16 @@ export default function Userabout() {
         </div>
       </div>
 
-   
+      {/* Footer */}
       <div className="footer">
-        <p>Email: <a href="mailto:hostelcare@gmail.com">hostelcare@gmail.com</a></p>
-        <p>Contact: <a href="tel:+911234567890">+91 1234567890</a></p>
+        <h3>Inhouse Project By Department of Computer Science and Engineering</h3>
+        <h3>Contributors:</h3>
+        <p>Dharanya S</p>
+        <p>Dhiviya Lakshime C</p>
+        <p>Harshini M</p>
+        <p>
+          Email: <a href="mailto:hostelcare@gmail.com">hostelcare@gmail.com</a>
+        </p>
       </div>
     </div>
   );

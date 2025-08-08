@@ -1,12 +1,12 @@
 .carpenter-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
+    margin:0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url('/carpentrybg.avif') no-repeat center center/cover;
-    padding: 20px;
     position: relative;
     opacity: 0.9; 
   }
@@ -81,40 +81,3 @@
     background-color: rgb(245, 245, 125);
 }
 
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1755A7;
-    padding: 10px 20px;
-    color: white;
-}
-
-.logo {
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 60px; 
-    width: auto; 
-    max-width: 300px; 
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-.profile-icon {
-    cursor: pointer;
-}
